@@ -1,0 +1,467 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Masudur Rashied | Professional Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap">
+<style>
+/* Layout: the navy-and-teal shell of the original, with a serif voice, a portrait-led hero, ruled project rows and a press section from the redesign. */
+:root{
+ --navy:#102b3f;--navy2:#173d52;--teal:#1c8b83;--mint:#dff3ed;
+ --ink:#1c2d3b;--muted:#5d6e7e;--paper:#ffffff;--wash:#f3f7f8;
+ --line:#dce6e9;--shadow:0 18px 50px rgba(16,43,63,.10);
+ --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+ --sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.7 var(--sans)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:#fff}
+a{color:inherit;text-decoration:none}a:hover{color:var(--teal)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:3px}
+.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+h1,h2,h3{margin:0}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(220,230,233,.85)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-family:var(--serif);font-weight:700;letter-spacing:-.005em;color:var(--navy);font-size:1.25rem}
+.brand span{color:var(--teal)}
+nav{display:flex;align-items:center;gap:26px;font-size:.88rem;font-weight:600;color:#526474}
+nav a:hover{color:var(--teal)}
+.nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:6px;padding:11px 18px;background:var(--teal);color:#fff;font-weight:700;font-size:.9rem;border:1px solid var(--teal);transition:.2s}
+.nav-cta:hover,.button:hover{background:#146f69;color:#fff;transform:translateY(-1px)}
+.menu{display:none;background:none;border:1px solid var(--line);padding:8px 11px;border-radius:6px;color:var(--navy);font-size:1.1rem;cursor:pointer}
+
+/* Hero */
+.hero{background:linear-gradient(120deg,var(--navy) 0%,#143d51 68%,#1b5d61 100%);color:#fff;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:570px;height:570px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-160px;top:-220px;box-shadow:0 0 0 55px rgba(255,255,255,.025),0 0 0 110px rgba(255,255,255,.02);pointer-events:none}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:64px;align-items:center;padding:88px 0 84px}
+.kicker{font-size:.76rem;text-transform:uppercase;letter-spacing:.18em;color:#a9e2d8;font-weight:700}
+.hero h1{font-family:var(--serif);font-size:clamp(2.5rem,5.2vw,4.3rem);font-weight:600;line-height:1.07;letter-spacing:-.02em;margin:18px 0 22px;text-wrap:balance}
+.hero p.lede{max-width:600px;color:#d5e3e9;font-size:1.1rem;margin:0 0 30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.button.light{background:#fff;color:var(--navy);border-color:#fff}
+.button.light:hover{background:var(--mint);color:var(--navy)}
+.button.outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+.button.outline:hover{background:rgba(255,255,255,.12);color:#fff}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px;padding-top:25px;border-top:1px solid rgba(255,255,255,.18);max-width:560px}
+.hero-stats strong{display:block;font-family:var(--serif);font-size:1.3rem;font-weight:600;color:#fff}
+.hero-stats span{font-size:.76rem;color:#b9cbd3}
+.hero-card{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);backdrop-filter:blur(8px);border-radius:14px;padding:16px;min-width:0}
+.hero-card img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:9px}
+.hero-card .cap{padding:18px 6px 6px}
+.hero-card .small{color:#a9e2d8;text-transform:uppercase;letter-spacing:.13em;font-size:.7rem;font-weight:700}
+.hero-card h2{font-family:var(--serif);font-size:1.2rem;font-weight:600;margin:6px 0 4px;color:#fff;line-height:1.3}
+.hero-card p{font-size:.88rem;margin:0;color:#d5e3e9}
+
+/* Worked with */
+.with{background:var(--wash);border-bottom:1px solid var(--line)}
+.with .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 34px;padding:22px 0}
+.with .lab{font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.with ul{display:flex;flex-wrap:wrap;gap:6px 30px;margin:0;padding:0;list-style:none}
+.with li{font-family:var(--serif);font-weight:600;font-size:1.02rem;color:var(--navy)}
+
+/* Sections */
+section{padding:84px 0}
+section.alt{background:var(--wash)}
+.section-head{max-width:720px;margin-bottom:40px}
+.eyebrow{color:var(--teal);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+h2.section-title{font-family:var(--serif);font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:600;line-height:1.15;letter-spacing:-.015em;color:var(--navy);margin:9px 0 13px;text-wrap:balance}
+.section-head p{color:var(--muted);margin:0}
+
+.about-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:55px;align-items:start}
+.about-copy p{margin:0 0 17px;color:#465867}
+.info-panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:25px;box-shadow:var(--shadow)}
+.info-row{display:flex;justify-content:space-between;gap:18px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.info-row:last-child{border:0}.info-row span{color:var(--muted)}.info-row strong{text-align:right;color:var(--navy)}
+
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{border:1px solid var(--line);border-radius:12px;padding:24px;background:#fff;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#b9d8d3}
+.card-icon{width:43px;height:43px;border-radius:10px;background:var(--mint);display:grid;place-items:center;color:var(--teal);font-size:1.2rem;font-weight:900}
+.card h3{font-family:var(--serif);margin:17px 0 7px;color:var(--navy);font-size:1.2rem;font-weight:600}
+.card p{margin:0;color:var(--muted);font-size:.92rem}
+
+/* Project management and delivery highlights */
+.achievement-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.achievement{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+.achievement .index{font-size:.74rem;color:var(--teal);font-weight:700;letter-spacing:.12em}
+.achievement h3{font-family:var(--serif);font-size:1.22rem;font-weight:600;color:var(--navy);margin:8px 0}
+.achievement p{margin:0;color:var(--muted);font-size:.92rem}
+
+/* Selected work rows */
+.works{border-top:1px solid var(--line)}
+.work{display:grid;grid-template-columns:140px minmax(0,1fr) 220px;gap:12px 36px;padding:30px 0;border-bottom:1px solid var(--line)}
+.work .yr{font-size:.84rem;font-weight:700;color:var(--teal);padding-top:6px}
+.work h3{font-family:var(--serif);font-size:1.4rem;font-weight:600;line-height:1.25;color:var(--navy)}
+.work.lead h3{font-size:1.7rem}
+.work .desc{color:var(--muted);margin:10px 0 0;max-width:62ch;font-size:.97rem}
+.work .venue{font-size:.84rem;margin:12px 0 0;color:var(--ink)}
+.work .wtags{display:flex;flex-wrap:wrap;align-content:flex-start;gap:6px;padding-top:4px;margin:0;list-style:none}
+.note{margin:22px 0 0;color:var(--muted);font-size:.93rem}
+
+/* Press and publications */
+.pub-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.pub{display:block;padding:24px;border:1px solid var(--line);border-top:3px solid var(--teal);border-radius:10px;background:#fff;transition:.2s}
+.pub:hover{transform:translateY(-3px);box-shadow:var(--shadow);color:inherit}
+.pub .number{font-size:.74rem;color:var(--teal);font-weight:700;letter-spacing:.1em}
+.pub p{font-family:var(--serif);margin:8px 0;color:var(--navy);font-size:1.25rem;font-weight:600;line-height:1.3}
+.pub small{color:var(--muted)}
+.pub .go{color:var(--teal);font-weight:700;font-size:.84rem;display:block;margin-top:10px}
+
+/* Experience */
+.timeline{max-width:920px}
+.job{display:grid;grid-template-columns:190px minmax(0,1fr);gap:28px;padding:0 0 34px;margin:0 0 30px;border-bottom:1px solid var(--line)}
+.job:last-child{border:0;margin-bottom:0;padding-bottom:0}
+.date{font-size:.82rem;color:var(--teal);font-weight:700;padding-top:5px}
+.job h3{font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--navy)}
+.job .org{color:var(--muted);font-size:.91rem;margin:3px 0 10px}
+.job ul{margin:0;padding-left:19px;color:#4d5d69;font-size:.91rem}
+.job li{padding:2px 0}
+
+/* Skills */
+.skills-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.skill-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:23px}
+.skill-box h3{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--navy);margin:0 0 13px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{padding:5px 10px;background:var(--wash);border:1px solid var(--line);border-radius:5px;color:#425666;font-size:.8rem}
+.work .tag{background:#fff}
+
+/* Education and training */
+.education{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.edu-card{background:#fff;border:1px solid var(--line);border-radius:11px;padding:21px}
+.edu-card .year{color:var(--teal);font-size:.76rem;font-weight:700;letter-spacing:.04em}
+.edu-card h3{font-family:var(--serif);font-size:1.12rem;font-weight:600;color:var(--navy);margin:6px 0 3px}
+.edu-card p{margin:0;color:var(--muted);font-size:.87rem}
+.training-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.training{padding:17px 19px;border-left:3px solid var(--teal);background:#fff;border-radius:0 8px 8px 0}
+.training strong{display:block;color:var(--navy);font-size:.91rem}.training span{font-size:.82rem;color:var(--muted)}
+
+/* Contact */
+.contact-band{background:var(--navy);color:#fff;border-radius:14px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:32px}
+.contact-band h2{font-family:var(--serif);font-size:2.1rem;font-weight:600;line-height:1.15;letter-spacing:-.015em;margin:8px 0 9px}
+.contact-band p{color:#c7d8df;margin:0}
+.contact-links{display:flex;flex-direction:column;gap:9px;font-size:.92rem;min-width:0;overflow-wrap:anywhere}
+.contact-links a{color:#b8e9df}
+.contact-links a:hover{color:#fff}
+footer{padding:26px 0;color:var(--muted);font-size:.82rem}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+
+@media(max-width:980px){
+ nav{display:none;position:absolute;left:0;right:0;top:74px;background:#fff;padding:18px 24px 24px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:13px}
+ nav.open{display:flex}.menu{display:block}.nav-cta{display:none}
+ .hero-inner{grid-template-columns:minmax(0,1fr);gap:40px;padding:64px 0}
+ .hero-card{max-width:340px}
+ .about-grid{grid-template-columns:minmax(0,1fr);gap:28px}
+ .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .work{grid-template-columns:110px minmax(0,1fr);gap:10px 28px}
+ .work .wtags{grid-column:2}
+}
+@media(max-width:640px){
+ .wrap{width:min(100% - 32px,1160px)}
+ section{padding:60px 0}
+ .hero-inner{padding:48px 0}
+ .hero-stats{gap:8px}.hero-stats strong{font-size:1.1rem}
+ .cards,.skills-layout,.education,.pub-list,.training-list,.achievement-grid{grid-template-columns:minmax(0,1fr)}
+ .work{grid-template-columns:minmax(0,1fr);padding:24px 0}
+ .work .yr{padding-top:0}.work .wtags{grid-column:auto}
+ .work h3,.work.lead h3{font-size:1.3rem}
+ .job{grid-template-columns:minmax(0,1fr);gap:6px}
+ .contact-band{padding:28px;display:block}.contact-links{margin-top:22px}
+ .contact-band h2{font-size:1.7rem}
+}
+@media print{
+ header,.hero-actions,.menu,.nav-cta{display:none!important}body{font-size:11pt}
+ .hero{background:var(--navy)!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ section{padding:35px 0;break-inside:avoid}.card,.job,.edu-card,.pub,.work{break-inside:avoid}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.pub,.button,.nav-cta{transition:none}}
+</style>
+
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#home">Masudur <span>Rashied</span></a>
+  <nav id="nav">
+   <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#achievements">Achievements</a><a href="#work">Work</a>
+   <a href="#press">Press</a><a href="#experience">Experience</a><a href="#skills">Skills</a>
+  </nav>
+  <a class="nav-cta" href="#contact">Get in touch ↓</a>
+  <button class="menu" type="button" aria-label="Toggle navigation" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="home" style="padding:0">
+ <div class="wrap hero-inner">
+  <div>
+   <div class="kicker">Project management professional · Urban &amp; regional planner · GIS</div>
+   <h1>Managing projects. Connecting people, planning and technical solutions.</h1>
+   <p class="lede">I bring together project coordination, stakeholder engagement, research and technical work in urban and regional planning, GIS, 3D visualisation and hydraulic modelling—supporting development initiatives from planning through implementation.</p>
+   <div class="hero-actions">
+    <a class="button light" href="#work">View selected work ↓</a>
+    <a class="button outline" href="#contact">Contact me ↓</a>
+   </div>
+   <div class="hero-stats">
+    <div><strong>JICA</strong><span>Programme support</span></div>
+    <div><strong>GIS</strong><span>Spatial analysis</span></div>
+    <div><strong>Research</strong><span>Planning &amp; resilience</span></div>
+   </div>
+  </div>
+  <div class="hero-card">
+   <img alt="Portrait of Masudur Rashied" src="data:image/jpeg;base64,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">
+   <div class="cap">
+    <div class="small">Currently</div>
+    <h2>Program Officer, JICA Bangladesh</h2>
+    <p>JICA Advisor Office, Bangladesh Water Development Board, Dhaka</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<div class="with">
+ <div class="wrap">
+  <span class="lab">Worked with</span>
+  <ul>
+   <li>JICA</li><li>Bangladesh Water Development Board</li><li>Local Government Division</li><li>NILG</li><li>HBRI</li><li>Jahangirnagar University</li>
+  </ul>
+ </div>
+</div>
+
+<section id="about">
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">About me</div><h2 class="section-title">A project management professional with a technical planning and research background.</h2><p>I connect people, workplans and technical expertise to move development initiatives forward.</p></div>
+  <div class="about-grid">
+   <div class="about-copy">
+    <p>I am a project management and programme coordination professional with an academic background in Urban and Regional Planning from Jahangirnagar University. My experience spans JICA-supported initiatives, government coordination, applied research and knowledge management.</p>
+    <p>In my current role at the JICA Advisor Office, I coordinate expert activities, stakeholder meetings, field visits and workshops, while supporting work planning, procurement, resource planning, technical analysis and modelling, reporting, and capacity development.</p>
+    <p>Earlier assignments strengthened my experience in local governance, research coordination, GIS database development, field studies, workshops and collaboration with Bangladeshi and Japanese researchers.</p>
+   </div>
+   <div class="info-panel">
+    <div class="info-row"><span>Professional focus</span><strong>Project Management</strong></div>
+     <div class="info-row"><span>Current position</span><strong>Program Officer</strong></div>
+    <div class="info-row"><span>Organization</span><strong>JICA Bangladesh</strong></div>
+    <div class="info-row"><span>Assignment</span><strong>JICA Advisor Office, BWDB</strong></div>
+    <div class="info-row"><span>Education</span><strong>MURP &amp; BURP</strong></div>
+    <div class="info-row"><span>Institution</span><strong>Jahangirnagar University</strong></div>
+    <div class="info-row"><span>Languages</span><strong>Bengali · English</strong></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="expertise">
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">Core expertise</div><h2 class="section-title">Where I contribute</h2><p>Project delivery, stakeholder coordination and technical capabilities developed through programme, research and institutional assignments.</p></div>
+  <div class="cards">
+   <article class="card"><div class="card-icon">⌖</div><h3>GIS &amp; Spatial Analysis</h3><p>GIS database creation and management, survey data processing, spatial analysis, mapping and visualization.</p></article>
+   <article class="card"><div class="card-icon">▤</div><h3>Research &amp; Technical Support</h3><p>Research design, data collection, technical analysis, modelling, report preparation and knowledge management.</p></article>
+   <article class="card"><div class="card-icon">⇄</div><h3>Project Management &amp; Coordination</h3><p>Work planning, activity coordination, resource and procurement support, progress follow-up, reporting and delivery across project workstreams.</p></article>
+   <article class="card"><div class="card-icon">⌂</div><h3>Urban &amp; Regional Planning</h3><p>Academic and applied work related to urban planning, community development and urban resilience.</p></article>
+   <article class="card"><div class="card-icon">◎</div><h3>Institutional Liaison</h3><p>Communication with government agencies, development partners, universities and national and international experts.</p></article>
+   <article class="card"><div class="card-icon">▣</div><h3>Administration &amp; Procurement</h3><p>Administrative support, procurement coordination, resource planning, budgeting and project documentation.</p></article>
+  </div>
+ </div>
+</section>
+
+
+<section class="alt" id="achievements">
+ <div class="wrap">
+  <div class="section-head">
+   <div class="eyebrow">Project delivery &amp; technical contributions</div>
+   <h2 class="section-title">Selected achievements</h2>
+   <p>Examples of how I bring together people, project activities and technical outputs across development and research assignments.</p>
+  </div>
+  <div class="achievement-grid">
+   <article class="achievement">
+    <div class="index">01 · STAKEHOLDER ENGAGEMENT</div>
+    <h3>Stakeholder meetings &amp; coordination</h3>
+    <p>Organised and coordinated meetings involving government agencies, development partners, researchers, consultants and technical experts. Supported agendas, presentations, discussion records and follow-up actions.</p>
+   </article>
+   <article class="achievement">
+    <div class="index">02 · CAPACITY DEVELOPMENT</div>
+    <h3>Training, workshops &amp; knowledge sharing</h3>
+    <p>Organised and supported training sessions, seminars and workshops for government officials, researchers and field teams, contributing to knowledge sharing and institutional capacity development.</p>
+   </article>
+   <article class="achievement">
+    <div class="index">03 · 3D VISUALISATION</div>
+    <h3>3D modelling &amp; visualisation</h3>
+    <p>Developed and used 3D models and visual materials to communicate spatial, planning and technical concepts more clearly to project teams and stakeholders.</p>
+   </article>
+   <article class="achievement">
+    <div class="index">04 · WATER &amp; RIVER SYSTEMS</div>
+    <h3>Hydraulic modelling &amp; technical analysis</h3>
+    <p>Contributed to hydraulic modelling and related technical analysis, supporting the interpretation and presentation of model outputs for water resources and river-related studies.</p>
+   </article>
+   <article class="achievement">
+    <div class="index">05 · PROJECT IMPLEMENTATION</div>
+    <h3>Field missions &amp; technical coordination</h3>
+    <p>Coordinated expert field visits and information collection, liaising with relevant offices and local stakeholders and helping translate field findings into project documentation.</p>
+   </article>
+   <article class="achievement">
+    <div class="index">06 · PROJECT SUPPORT</div>
+    <h3>Planning, reporting &amp; administration</h3>
+    <p>Supported work planning, procurement coordination, resource planning, budgeting inputs, progress documentation and the preparation of reports and presentations.</p>
+   </article>
+  </div>
+  <p class="note">These highlights are concise summaries. Specific project names, locations, dates, software and measurable results can be added to make each achievement more distinctive.</p>
+ </div>
+</section>
+
+<section id="work">
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">Research &amp; publications</div><h2 class="section-title">Selected work</h2><p>Earthquake risk in Dhaka, community-led planning, and the research programme I coordinated at HBRI.</p></div>
+  <div class="works">
+   <article class="work lead">
+    <div class="yr">2019 – 2020</div>
+    <div>
+     <h3>Where Dhaka’s ground amplifies earthquake shaking</h3>
+     <p class="desc">Two linked studies that read the city’s geological formation and soil character to find the areas most vulnerable to earthquakes, and map where seismic waves are likely to be amplified.</p>
+     <p class="venue">17th World Conference on Earthquake Engineering (2020) · Journal of Bangladesh Institute of Planners, Vol. 12 (2019)</p>
+    </div>
+    <ul class="wtags"><li class="tag">ArcGIS</li><li class="tag">Geology</li><li class="tag">Soil character</li><li class="tag">Hazard mapping</li></ul>
+   </article>
+   <article class="work">
+    <div class="yr">2021</div>
+    <div>
+     <h3>Earthquake vulnerability and retrofitting in Lalmatia, Dhaka</h3>
+     <p class="desc">Vulnerability scored with the Analytical Hierarchy Process and paired with a social appraisal of whether residents can retrofit.</p>
+     <p class="venue">1st Croatian Conference on Earthquake Engineering</p>
+    </div>
+    <ul class="wtags"><li class="tag">AHP</li><li class="tag">Social appraisal</li></ul>
+   </article>
+   <article class="work">
+    <div class="yr">2018 – 2022</div>
+    <div>
+     <h3>JICA-SATREPS-TSUIB research programme</h3>
+     <p class="desc">Coordinated HBRI’s research with Japanese and Bangladeshi universities, supervised researchers, ran community consultations and built the project’s ArcGIS survey databases.</p>
+     <p class="venue">Housing and Building Research Institute, Dhaka</p>
+    </div>
+    <ul class="wtags"><li class="tag">Coordination</li><li class="tag">ArcGIS</li><li class="tag">Workshops</li></ul>
+   </article>
+   <article class="work">
+    <div class="yr">2020</div>
+    <div>
+     <h3>Community plan for Shipahibag, Khilgaon</h3>
+     <p class="desc">A comprehensive community plan for a lower-middle income neighbourhood of Dhaka, presented as a case study.</p>
+     <p class="venue">Habitat Day 2020 Proceeding, Ministry of Housing and Public Works</p>
+    </div>
+    <ul class="wtags"><li class="tag">Community planning</li><li class="tag">Case study</li></ul>
+   </article>
+   <article class="work">
+    <div class="yr">2017</div>
+    <div>
+     <h3>Gender-responsive urban public places</h3>
+     <p class="desc">A planning perspective on how Dhaka’s public places serve women, and what planners can change.</p>
+     <p class="venue">Journal of Bangladesh Institute of Planners, Vol. 10</p>
+    </div>
+    <ul class="wtags"><li class="tag">Public space</li><li class="tag">Gender</li></ul>
+   </article>
+   <article class="work">
+    <div class="yr">2016</div>
+    <div>
+     <h3>Community participation in a low-income community</h3>
+     <p class="desc">How residents take part in development projects, and where that participation works and falls short.</p>
+     <p class="venue">Jahangirnagar University Planning Review, Vol. 14</p>
+    </div>
+    <ul class="wtags"><li class="tag">Participation</li><li class="tag">Low-income housing</li></ul>
+   </article>
+  </div>
+  <p class="note">Also the book chapter <em>Urban Planning toward Resilience City</em>.</p>
+ </div>
+</section>
+
+<section class="alt" id="press">
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">In the press</div><h2 class="section-title">Writing for The Daily Star</h2><p>Opinion pieces on flooding and waterlogging in Bangladesh’s two largest cities.</p></div>
+  <div class="pub-list">
+   <a class="pub" href="https://www.thedailystar.net/opinion/views/news/dhakas-next-flood-predictable-are-we-prepared-it-4217711" target="_blank" rel="noopener"><div class="number">7 JULY 2026 · OPINION</div><p>Dhaka’s next flood is predictable. Are we prepared for it?</p><small>The Daily Star</small><span class="go">Read the article ↗</span></a>
+   <a class="pub" href="https://www.thedailystar.net/opinion/views/news/chattograms-waterlogging-planning-failure-4173596" target="_blank" rel="noopener"><div class="number">12 MAY 2026 · OPINION</div><p>Chattogram’s waterlogging is a planning failure</p><small>The Daily Star</small><span class="go">Read the article ↗</span></a>
+  </div>
+ </div>
+</section>
+
+<section id="experience">
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">Career history</div><h2 class="section-title">Professional experience</h2><p>Selected roles and responsibilities across development cooperation, research and public-sector support.</p></div>
+  <div class="timeline">
+   <article class="job">
+    <div class="date">January 2023 – Present</div><div><h3>Program Officer · JICA Advisor Office</h3><div class="org">JICA Bangladesh · Bangladesh Water Development Board (BWDB), Pani Bhaban, Dhaka</div>
+    <ul><li>Provide technical support through analysis and modelling, programming scripts, technical reports and articles.</li><li>Collect, analyse and organize information from reports, websites, field visits and stakeholder interviews.</li><li>Support procurement, resource planning, budgeting and other administrative and managerial tasks.</li><li>Organize meetings, seminars and workshops; prepare minutes, presentation summaries and discussion points.</li><li>Coordinate expert activities and accompany experts on domestic field trips for information collection and individual studies.</li><li>Provide capacity-building support to government officials and translate documents from Bengali into English.</li></ul></div>
+   </article>
+   <article class="job">
+    <div class="date">September 2022 – December 2022</div><div><h3>Local Governance Consultant · JICA Governance</h3><div class="org">JICA Bangladesh · Assigned to National Institute of Local Government (NILG), Dhaka</div>
+    <ul><li>Coordinated with government organizations, including LGD and NILG, and relevant JICA projects to identify opportunities for cooperation.</li><li>Conducted research and analysis on local governance practices, conditions and policies in Bangladesh.</li><li>Participated in field visits, meetings and workshops; prepared minutes and field-visit reports.</li><li>Maintained coordination with development partners, including the World Bank, ADB, SDC and UNDP.</li><li>Supported dissemination of project practices and procurement of office and programme materials.</li></ul></div>
+   </article>
+   <article class="job">
+    <div class="date">November 2018 – March 2022</div><div><h3>Junior Research Consultant · JICA-SATREPS-TSUIB Project</h3><div class="org">Housing and Building Research Institute (HBRI), Dhaka</div>
+    <ul><li>Coordinated HBRI research activities with Japanese and Bangladeshi researchers, university professors and government officials.</li><li>Monitored research activities and provided technical assistance, training and guidance.</li><li>Organized workshops, seminars and community consultation meetings.</li><li>Prepared research plans, project documents, progress reports and field-visit reports.</li><li>Created and maintained ArcGIS databases, updated survey data and supported interpretation and visualization.</li></ul></div>
+   </article>
+   <article class="job">
+    <div class="date">September 2018 – October 2018</div><div><h3>Officer – Research and Knowledge Management</h3><div class="org">Disaster Management Watch, Dhaka</div>
+    <ul><li>Prepared data-collection tools and trained and coordinated survey teams.</li><li>Organized workshops, coordinated with donor agencies, and monitored and evaluated project activities.</li><li>Prepared research plans and documented project activities.</li></ul></div>
+   </article>
+   <article class="job">
+    <div class="date">January 2016 – March 2018</div><div><h3>Research Assistant</h3><div class="org">Department of Urban and Regional Planning · Jahangirnagar University</div>
+    <ul><li>Prepared research proposals, designs, methodologies and data-collection tools.</li><li>Coordinated data collection, data entry and interpretation; developed GIS databases, maps and reports.</li></ul></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="skills">
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">Tools &amp; methods</div><h2 class="section-title">Technical skills</h2><p>Software, platforms and programming languages listed in my professional CV.</p></div>
+  <div class="skills-layout">
+   <div class="skill-box"><h3>GIS &amp; Analysis</h3><div class="tags"><span class="tag">ArcGIS</span><span class="tag">QGIS</span><span class="tag">SPSS</span><span class="tag">ALOHA</span><span class="tag">Google Earth Engine</span><span class="tag">iRIC</span><span class="tag">RRI</span></div></div>
+   <div class="skill-box"><h3>Programming &amp; WebGIS</h3><div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">GeoServer</span><span class="tag">OpenLayers</span></div></div>
+   <div class="skill-box"><h3>Creative &amp; 3D Applications</h3><div class="tags"><span class="tag">Adobe Illustrator</span><span class="tag">Photoshop</span><span class="tag">Premiere Pro</span><span class="tag">Adobe XD</span><span class="tag">SketchUp 3D</span><span class="tag">Blender (Basic)</span></div></div>
+   <div class="skill-box"><h3>Productivity &amp; Development</h3><div class="tags"><span class="tag">Word</span><span class="tag">Excel</span><span class="tag">PowerPoint</span><span class="tag">Publisher</span><span class="tag">Outlook</span><span class="tag">PyCharm</span><span class="tag">VS Code</span><span class="tag">Anaconda</span></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="education">
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">Academic background</div><h2 class="section-title">Education</h2></div>
+  <div class="education">
+   <article class="edu-card"><div class="year">JANUARY – DECEMBER 2015</div><h3>Master of Urban and Regional Planning</h3><p>Jahangirnagar University, Savar, Bangladesh</p><p>CGPA: 3.49 / 4.00 · Thesis supervisor: Prof. Dr. Halima Begum</p></article>
+   <article class="edu-card"><div class="year">JANUARY 2011 – DECEMBER 2014</div><h3>Bachelor of Urban and Regional Planning</h3><p>Jahangirnagar University, Savar, Bangladesh</p><p>CGPA: 3.49 / 4.00 · Thesis supervisor: Prof. Dr. Halima Begum</p></article>
+   <article class="edu-card"><div class="year">2010</div><h3>Higher Secondary Certificate · Science</h3><p>Milestone College, Uttara, Bangladesh</p><p>GPA: 4.90 / 5.00</p></article>
+   <article class="edu-card"><div class="year">2008</div><h3>Secondary School Certificate · Science</h3><p>Uttara High School, Uttara, Bangladesh</p><p>GPA: 5.00 / 5.00</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="training">
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">Professional development</div><h2 class="section-title">Training &amp; workshops</h2></div>
+  <div class="training-list">
+   <div class="training"><strong>Project Management Training</strong><span>PMI Bangladesh Chapter / Bangladesh Institute of Planners · 29–31 May 2025</span></div>
+   <div class="training"><strong>Youth Development Exposure-cum-Training Programme</strong><span>RGNIYD, Chennai, India · 2–6 January 2018</span></div>
+   <div class="training"><strong>Capacity Building Workshop on Inclusive and Equitable Lifelong Learning in the Context of SDGs</strong><span>Research for Advancement of Complete Education · 3 September 2016</span></div>
+   <div class="training"><strong>Training on Total Station Survey Techniques</strong><span>HEQEP, UGC · 7 May 2014</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap">
+  <div class="contact-band">
+   <div><div class="kicker">Contact</div><h2>Let’s connect professionally.</h2><p>For professional enquiries, collaboration and further information.</p></div>
+   <div class="contact-links">
+    <span>✉ masudurrashied@outlook.com</span>
+    <span>☎ +880 1670-068231</span>
+    <a href="https://www.linkedin.com/in/masudurrashied/" target="_blank" rel="noopener">↗ LinkedIn profile</a>
+    <a href="https://orcid.org/0000-0002-5079-9792" target="_blank" rel="noopener">↗ ORCID profile</a>
+    <span>Dhaka, Bangladesh</span>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> Masudur Rashied. All rights reserved.</span><span>Professional portfolio · Dhaka, Bangladesh</span></div></footer>
+<script>
+(function(){
+ var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();
+ document.querySelectorAll('nav a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nav').classList.remove('open')})});
+})();
+</script>
+
+</body></html>
